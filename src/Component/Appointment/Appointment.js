@@ -1,5 +1,5 @@
-import Modal from 'react-modal';
 import React, { useState } from 'react';
+import Modal from 'react-modal';
 import './Appointment.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -16,7 +16,6 @@ import Card from '@material-ui/core/Card';
 import { utils } from 'react-modern-calendar-datepicker';
 import { Calendar } from "react-modern-calendar-datepicker";
 import CardContent from '@material-ui/core/CardContent';
-
     
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -39,10 +38,6 @@ const useStyles = makeStyles((theme) => ({
     },
     linkText: {
         padding: '5px',
-        color: 'inherit',
-        ":hover": {
-            textDecoration: 'none'
-        },
     },
     img: {
         height: '40%',
@@ -65,7 +60,6 @@ const useStyles = makeStyles((theme) => ({
     },
     h5: {
         textAlign: 'center',
-        color: '#32CCBC',
 
     },
     cardRoot: {
@@ -73,14 +67,9 @@ const useStyles = makeStyles((theme) => ({
     },
     cardTitle: {
         fontSize: 20,
-        color: '#32CCBC',
     },
     btn: {
         backgroundColor: '#32CCBC',
-        "hover": {
-            backgroundColor: '#32CCBC'
-        },
-        color: "#fff"
     },
     modalPaddingTop: {
         paddingTop: '200px',
@@ -97,7 +86,6 @@ const useStyles = makeStyles((theme) => ({
     },
     submitBtn: {
         backgroundColor: '#32CCBC',
-        color: '#fff',
         paddingLeft: '10px',
         paddingRight: '10px',
         borer: 'none',
@@ -106,6 +94,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
+Modal.setAppElement('#root')
 const Appointment = (props) => {
     const classes = useStyles();
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -185,10 +174,10 @@ const Appointment = (props) => {
                                     <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
                                         Teeth Orthodontics
                                     </Typography>
-                                    <Typography variant="body2" color="black">
+                                    <Typography variant="body2">
                                         8:00 AM - 9:00 AM
                                     </Typography>
-                                    <Typography className={classes.pos} color="textSecondary">
+                                    <Typography color="textSecondary">
                                         <small>10 SPACES AVAILABEL</small>
                                     </Typography>
                                     <Button onClick={() => setModalIsOpen(true)} className={classes.btn}>
@@ -203,10 +192,10 @@ const Appointment = (props) => {
                                     <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
                                         Cosmetic Dentistry
                                     </Typography>
-                                    <Typography variant="body2" color="black">
+                                    <Typography variant="body2" >
                                         10:05 AM - 11:30 AM
                                     </Typography>
-                                    <Typography className={classes.pos} color="textSecondary">
+                                    <Typography color="textSecondary">
                                         <small>10 SPACES AVAILABEL</small>
                                     </Typography>
                                     <Button onClick={() => setModalIsOpen(true)} className={classes.btn}>
@@ -221,10 +210,10 @@ const Appointment = (props) => {
                                     <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
                                         Teeth Cleaning
                                     </Typography>
-                                    <Typography variant="body2" color="black">
+                                    <Typography variant="body2" >
                                         5:00 PM - 6:30 PM
                                     </Typography>
-                                    <Typography className={classes.pos} color="textSecondary">
+                                    <Typography color="textSecondary">
                                         <small>10 SPACES AVAILABEL</small>
                                     </Typography>
                                     <Button onClick={() => setModalIsOpen(true)} className={classes.btn}>
@@ -243,10 +232,10 @@ const Appointment = (props) => {
                                     <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
                                         Cavity Protection
                                     </Typography>
-                                    <Typography variant="body2" color="black">
+                                    <Typography variant="body2">
                                         7:00 AM - 8:30 AM
                                     </Typography>
-                                    <Typography className={classes.pos} color="textSecondary">
+                                    <Typography color="textSecondary">
                                         <small>10 SPACES AVAILABEL</small>
                                     </Typography>
                                     <Button onClick={() => setModalIsOpen(true)} className={classes.btn}>
@@ -261,10 +250,10 @@ const Appointment = (props) => {
                                     <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
                                         Teeth Orthodontics
                                     </Typography>
-                                    <Typography variant="body2" color="black">
+                                    <Typography variant="body2">
                                         8:00 AM - 9:00 AM
                                     </Typography>
-                                    <Typography className={classes.pos} color="textSecondary">
+                                    <Typography color="textSecondary">
                                         <small>10 SPACES AVAILABEL</small>
                                     </Typography>
                                     <Button onClick={() => setModalIsOpen(true)} className={classes.btn}>
@@ -279,10 +268,10 @@ const Appointment = (props) => {
                                     <Typography className={classes.cardTitle} color="textSecondary" gutterBottom>
                                         Teeth Orthodontics
                                     </Typography>
-                                    <Typography variant="body2" color="black">
+                                    <Typography variant="body2">
                                         8:00 AM - 9:00 Am
                                     </Typography>
-                                    <Typography className={classes.pos} color="textSecondary">
+                                    <Typography color="textSecondary">
                                         <small>10 SPACES AVAILABEL</small>
                                     </Typography>
                                     <Button onClick={() => setModalIsOpen(true)} className={classes.btn}>

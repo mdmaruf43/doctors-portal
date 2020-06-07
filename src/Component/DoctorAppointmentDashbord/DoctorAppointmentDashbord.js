@@ -1,5 +1,5 @@
-import Modal from 'react-modal';
 import React, { useState, useEffect } from 'react';
+import Modal from 'react-modal';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -93,7 +93,6 @@ import CreateIcon from '@material-ui/icons/Create';
         display: 'flex',
         alignItems: 'center',
         padding: '5px',
-        color: '#fff'
     }, 
     bgColor: {
         backgroundColor: '#00c689',
@@ -103,18 +102,15 @@ import CreateIcon from '@material-ui/icons/Create';
     },
     btnViewBgColor: {
         backgroundColor: '#32CCBC',
-        color: '#fff'
     },
     iconBtnBgColor: {
         backgroundColor: '#ffd076',
         fontSize: '10px',
         marginLeft: '5px',
-        color: '#fff'
 
     },
     actionBtnBgColor: {
         backgroundColor: '#76c5ff',
-        color: '#fff'
     },
     modalPaddingTop: {
         paddingTop: '200px',
@@ -127,18 +123,19 @@ import CreateIcon from '@material-ui/icons/Create';
         backgroundColor: '#f5f5f5',
         border: 'none',
         borderRadius: '3px',
-        padding: '25px 15px !important' 
+        padding: '25px 15px !important', 
     },
     submitBtn: {
         backgroundColor: '#32CCBC',
-        color: '#fff',
         paddingLeft: '10px',
         paddingRight: '10px',
         borer: 'none',
         borderRadius: '5px',
-        fontSize: '1.2rem'
-    }
+        fontSize: '1.2rem',
+    },
 }));
+
+Modal.setAppElement('#root');
 
 const DoctorAppointmentDashbord = (props) => {
     const classes = useStyles();
@@ -174,7 +171,7 @@ const DoctorAppointmentDashbord = (props) => {
         .then(data => {
             setAppointmentInformation(data);
         })
-    })
+    }, []);
     return (
         <div className={classes.root}>
             <CssBaseline />
@@ -274,7 +271,7 @@ const DoctorAppointmentDashbord = (props) => {
                                             </TableHead>
                                             <TableBody>
                                                 {appointInformation.map((row) => (
-                                                    <TableRow key={row.name}>
+                                                    <TableRow key={row._id}>
                                                         <TableCell component="th" scope="row">{}</TableCell>
                                                         <TableCell align="right">{row.value}</TableCell>
                                                         <TableCell align="right">{row.appointmentTime}</TableCell>

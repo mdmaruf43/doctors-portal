@@ -43,7 +43,6 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
     drawerPaper: {
         backgroundColor: '#32CCBC',
         position: 'relative',
-        color: '#fff',
         height: '100vh',
         whiteSpace: 'nowrap',
         width: drawerWidth,
@@ -70,8 +69,7 @@ import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
     },
     btnGroupBgColor: {
         backgroundColor: '#32CCBC',
-        color: '#fff'
-    }
+    },
 }));
 
 const DoctorDashbord = (props) => {
@@ -86,7 +84,7 @@ const DoctorDashbord = (props) => {
         .then(data => {
             setAppointmentInformation(data);
         })
-    })
+    }, []);
     return (
         <div className={classes.root}>
             <CssBaseline />
